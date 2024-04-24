@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3F51B5"
+    android:orientation="vertical"
+    android:gravity="center"
+
+    >
+
+    <TextView
+        android:id="@+id/tv_who_is"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WHO IS"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        android:gravity="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bonjour. Qui sont ces gens? Et bien c'est à vous de les découvrir."
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:padding="36dp"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/bt_deviner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deviner"
+        android:layout_gravity="center"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_margin="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/img_user"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jeu1"
+                android:textColor="#FFF"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_margin="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/img_user"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jeu2"
+                android:textColor="#FFF"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
