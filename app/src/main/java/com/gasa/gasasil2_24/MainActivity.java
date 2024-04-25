@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TextView tvWhoIs = findViewById(R.id.tv_who_is);
         Button btDeviner =findViewById(R.id.bt_deviner);
+        Button btFormulaire =findViewById(R.id.bt_formulaire);
         tvWhoIs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, JeuActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        btFormulaire.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, PregoListActivity.class));
             }
         });
 

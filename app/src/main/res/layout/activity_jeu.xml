@@ -21,6 +21,12 @@
             android:layout_marginBottom="12dp"
             android:textStyle="bold"
             />
+        <CheckBox
+            android:id="@+id/cb_jouer_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Jouer audio"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

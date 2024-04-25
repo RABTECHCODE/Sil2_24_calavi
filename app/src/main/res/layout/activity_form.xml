@@ -1,0 +1,114 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/et_nom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nom"
+        android:inputType="text"/>
+    <EditText
+        android:id="@+id/et_prenom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Prénom"
+        android:inputType="text"/>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:visibility="gone"
+       >
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Sexe"
+           android:textSize="15sp"
+           android:gravity="center"/>
+       <RadioGroup
+           android:id="@+id/rg_sexe"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           >
+           <RadioButton
+               android:id="@+id/rb_masculin"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Masculin"
+               />
+           <RadioButton
+               android:id="@+id/rb_feminin"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Feminin"
+               />
+           <RadioButton
+               android:id="@+id/rb_autre"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Autres"
+               />
+       </RadioGroup>
+
+
+       <EditText
+           android:id="@+id/et_datecenaissance"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Date Naissance"
+           android:inputType="date"/>
+
+       <EditText
+           android:id="@+id/et_email"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Email"
+           android:inputType="textEmailAddress"/>
+
+       <EditText
+           android:id="@+id/et_motdepasse"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Mots de passe"
+           android:inputType="textPassword"/>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Vos sites préférés"
+           android:textSize="15sp"
+           android:gravity="center"/>
+       <CheckBox
+           android:id="@+id/cb_gouvbj"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Gouv.bi"/>
+       <CheckBox
+           android:id="@+id/cb_youtube"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Youtube"/>
+       <CheckBox
+           android:id="@+id/cb_rfi"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="RFI"/>
+
+
+
+   </LinearLayout>
+
+
+    <Button
+        android:id="@+id/bt_enregistrer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enregistrer"
+        android:background="#0f4"/>
+
+
+</LinearLayout>

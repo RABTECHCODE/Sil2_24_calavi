@@ -3,6 +3,8 @@ package com.gasa.gasasil2_24;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -49,6 +51,8 @@ public class JeuActivity extends AppCompatActivity {
     int indexImageInImgv3;
     int indexImageInImgv4;
     int score = 0;
+    MediaPlayer player;
+    private CheckBox cbJouerAudio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,11 +60,25 @@ public class JeuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_jeu);
         initView();
 
+        String nom = getIntent().getStringExtra("nom");
+        tvScore.setText(nom);
+
         nouveauJeu();
-        MediaPlayer player = MediaPlayer.create(this, R.raw.back_sound);
+
+        player = MediaPlayer.create(this, R.raw.back_sound);
         player.setLooping(true);
         player.start();
+cbJouerAudio.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean value) {
+        if(value==true){
+            player.setVolume(1.0f, 1.0f);
+        }else{
+            player.setVolume(0.0f, 0.0f);
 
+        }
+    }
+});
         imgv1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -113,6 +131,19 @@ public class JeuActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        player.pause();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        player.start();
     }
 
     void genererPositionBonneReponse() {
@@ -194,5 +225,6 @@ public class JeuActivity extends AppCompatActivity {
         imgv2 = findViewById(R.id.imgv_2);
         imgv3 = findViewById(R.id.imgv_3);
         imgv4 = findViewById(R.id.imgv_4);
+        cbJouerAudio = findViewById(R.id.cb_jouer_audio);
     }
 }
